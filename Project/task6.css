@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.header{
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.header > .menu > ul{
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    flex-wrap: wrap;
+    margin-right: 15px;
+}
+.header > .logo{
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo > .name{
+    font-weight: bold;
+}
+.menu > ul > li{
+    padding: 5px;
+    border-radius: 2px;
+    transition: transform o.5s, background-color 0.5s;
+}
+.menu > ul > li:hover{
+    transform: scale(1.1);
+    background-color: aliceblue;
+    color: blue;
+    border-bottom: 2px solid black;
+    cursor: pointer;
+}
+.main_content{
+    background-image: url(https://images.pexels.com/photos/962464/pexels-photo-962464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+    height: 790px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.main_content > h2{
+    font-weight: bold;
+    font-size: 40px;
+    text-shadow: 0px 2px 4px black;
+    color: red;
+    margin: 20px;
+}
+.services_heading{
+    text-align: center;
+    margin-top: 20px;
+}
+.services{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 20px;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+.card1,.img1,.card2,.img2,.card3,.img3{
+    max-width: 300px;
+    border: 1px solid #c8c7c7;
+    text-align: center;
+    border-radius: 5px;
+}
+.card1,.card2,.card3{
+    box-shadow: 3px 4px 4px black;
+    transition: transform 1s;
+}
+.card1:hover,.card2:hover,.card3:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.about_us{
+    padding:   40px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: aliceblue;
+    justify-content: space-evenly;
+}
+.side_img{
+    max-width: 600px;
+    box-shadow: 0px 3px 4px black;
+    transition: transform 1s;
+}
+.side_img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.side_text{
+    max-width: 500px;
+    text-align: justify;
+}
+.side_text > h1{
+    margin-bottom: 20px;
+    color: red;
+    font-weight: bold;
+}
+.g1,.g2,.g3,.g4,.g5,.g6{
+    max-width: 300px;
+    cursor: pointer;
+    transition: transform 1s;
+}
+.g1:hover,.g2:hover,.g3:hover,.g4:hover,.g5:hover,.g6:hover{
+    transform: scale(1.1);
+}
+.gallery{
+    background-color: aliceblue;
+}
+.gallery_text{
+     color: green;
+    width: 100%;
+    font-size: 40px;
+    text-align: center;
+    text-shadow: 2px 3px 4px black;
+    margin: 20px 0px ;
+}
+.contact-section{
+    padding: 2rem;
+    text-align: center;
+}
+.contact-form{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left;
+    font-weight: bold;
+}
+.contact-form > input, .contact-form > textarea, .contact-form > button{
+    width: 100%;
+    padding: 5px;
+    border: 1.5px solid #ddd;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+.contact-form > button{
+    background-color: rgb(4, 140, 213);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: transform .5s;
+}
+.contact-form > button:hover{
+    transform: scale(1.05);
+}
+.footer{
+    text-align: center;
+    background-color: grey;
+    color: white;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}

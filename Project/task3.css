@@ -1,0 +1,128 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    /* background-color: aquamarine; */
+    padding:10px ;
+}
+.logo-section{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 60px;
+}
+.branch-name{
+    display: flex;
+    justify-content: space-between;
+    gap: 600px;
+}
+.branch-name > h3{
+    color: rgb(6, 139, 196);
+}
+.branch-name > button{
+    padding: 2px;
+    font-weight: bold;
+    background-color:white ;
+    border: none;
+}
+main{
+    display: flex; 
+    /* justify-content: space-between; */
+}
+.nav-section{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width:15%;
+    padding-left: 15px;
+    background-color:rgb(238, 238, 238) ;
+    
+}
+.nav-section > button{
+    border: none;
+    font-size: 16px;
+    margin-top: 20px;
+    font-weight: lighter;
+    background-color:rgb(244, 241, 241) ;
+    transition: transform 6s;
+}
+.nav-section > button:hover{
+    color: rgb(6, 139, 196);
+}
+.bottom{
+    /* background-color: blue; */
+    margin-top: 60px;
+    gap: 5px;
+    width: 100%;
+    padding: 10px;
+}
+.bottom > input{
+    border: none;
+    background-color:rgb(244, 241, 241) ;
+}
+.profile-sec{
+    height: 350px;
+    width: 800px;
+    border: 1px solid blue;
+    background-color: white;
+    line-height: 1.5;
+    border-radius: 5px;
+    font-weight: lighter;
+
+}
+
+ /* .profile-sec >span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    column-gap: 20px;
+    width: 100%;
+    height: 1px;
+    background: #ccc;
+ }   */
+.main{
+    background-color: rgb(215, 224, 239);
+    display: flex;
+    justify-content: space-between;
+    padding:30px ;
+    height: 765px;
+    width: 85%;
+}
+.profile{
+    background-color: white;
+    height: 280px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid blue;
+    border-radius: 5px;
+    padding: 10px;
+}
+.profile > img{
+    border-radius: 50%;
+}
+.fa-arrows-rotate{
+    /* background-color:  ; */
+    border-radius: 50%;
+    color: white;
+}
+.background{
+    height: 30px;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(64, 106, 183);
+    border-radius: 50%;
+    padding: 2px;
+}

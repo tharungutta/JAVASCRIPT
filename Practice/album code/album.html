@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="album.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.3.0-beta.6/vuetify.min.js"></script>
+    <title>My Album</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+        <div class="album" :class="{'album--open': isOpenedTop}">
+          <div
+            class="album__paper"
+            :style="{zIndex: isOpenedTop ? 0 : items.length + 1 }"
+            :class="{'open': isOpenedTop}"
+            @click="topOpen(isOpenedTop)">
+            <div
+              class="album__page front"
+              :style="{transform: `translateZ(0.${items.length + 1}px)`}">
+              <div>
+                <div class="album__top-title">Album</div>
+                <p class="txt-tcw">Coding Wizard</p>
+                <div class="cat-mark"></div>
+              </div>
+            </div>
+            <div class="album__page back" :style="{zIndex: 0}"></div>
+          </div>
+          <div
+            class="album__paper"
+            v-for="(page, idx) in items"
+            :key="idx + 1"
+            :style="{zIndex: page.isOpen ? idx + 1 : items.length + 1 - (idx + 1) }"
+            :class="{'open': page.isOpen}"
+            @click="idx + 1 === items.length ? reset() : open(idx, page.isOpen)">
+            <div
+              class="album__page front"
+              :style="{transform: `translateZ(0.${items.length + 1 - (idx + 1)}px)`}">
+              <div class="content">
+                <div class="content__title">{{ page.title }}</div>
+                <div class="content__img1">
+                  <img :src="page.img1" />
+                  <div class="content__text">{{ idx + 1 }}</div>
+                </div>
+                <div class="content__img2"><img :src="page.img2" /></div>
+                <div class="content__img3"><img :src="page.img3" /></div>
+              </div>
+            </div>
+            <div class="album__page back" :style="{zIndex: idx + 1}"></div>
+          </div>
+          <div class="album__back"></div>
+          <div class="album__bottom"></div>
+          <div class="album__shadow"></div>
+        </div>
+      </div>
+    </div>
+    <script src="album.js"></script>
+  </body>
+</html>
